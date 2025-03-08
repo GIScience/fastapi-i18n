@@ -1,0 +1,2 @@
+msgid "Hello from fastapi-i18n!"
+msgstr "Hallo von fastapi-i18n!"

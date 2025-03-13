@@ -83,7 +83,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "fastapi", specifier = ">=0.115.11" },
+    { name = "fastapi", specifier = ">=0.109.2" },
     { name = "httpx", specifier = ">=0.23.0" },
 ]
 

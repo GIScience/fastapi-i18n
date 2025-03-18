@@ -1,4 +1,5 @@
 # TODO: Read config from pyproject.toml and fail if config is not found
+import logging
 
 
 import gettext
@@ -40,4 +41,10 @@ async def i18n(request: Request):
 
 
 def _(message: str) -> str:
-    return translator.get().translate(message)
+    try:
+        return translator.get().translate(message)
+    except LookupError:
+        logging.warning(
+            "FastAPI I18N translator is not set. Returning message untranslated."
+        )
+        return message

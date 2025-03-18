@@ -23,19 +23,19 @@ class Translator:
         return self.translations.gettext(message)
 
 
-translator: ContextVar[Translator] = ContextVar("translator")
 locale: ContextVar[str] = ContextVar("locale")
+translator: ContextVar[Translator] = ContextVar("translator")
 
 
 async def i18n(request: Request):
-    locale_default = os.getenv("FASTAPI_I18N_LOCALE_DEFAULT")
-    locale = request.headers.get("Accept-Language", locale_default)
-    token_locale = translator.set(locale)
-    token_translator = translator.set(Translator(locale=locale))
+    locale_default = os.getenv("FASTAPI_I18N_LOCALE_DEFAULT", "en")
+    locale_value = request.headers.get("Accept-Language", locale_default)
+    token_locale = locale.set(locale_value)
+    token_translator = translator.set(Translator(locale=locale_value))
     try:
         yield
     finally:
-        translator.reset(token_locale)
+        locale.reset(token_locale)
         translator.reset(token_translator)
 
 

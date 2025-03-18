@@ -5,7 +5,7 @@ This package is implemented as a [FastAPI dependency](https://fastapi.tiangolo.c
 ## Installation
 
 ```bash
-uv add
+uv add git+https://gitlab.heigit.org/mschaub/fastapi-i18n.git
 ```
 
 ## Prerequisites

@@ -1,8 +1,8 @@
 # FastAPI Internationalization (i18n)
 
 [![Build Status](https://jenkins.heigit.org/buildStatus/icon?job=fastapi-i18n/main)](https://jenkins.heigit.org/job/fastapi-i18n/job/main/)
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=fastapi-i18n-to-sql&metric=alert_status)](https://sonarcloud.io/dashboard?id=fastapi-i18n-to-sql)
-[![LICENSE](https://img.shields.io/github/license/GIScience/fastapi-i18n-to-sql)](COPYING)
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=fastapi-i18n-to-sql&metric=alert_status)](https://sonarcloud.io/dashboard?id=fastapi-i18n)
+[![LICENSE](https://img.shields.io/github/license/GIScience/fastapi-i18n)](COPYING)
 [![status: active](https://github.com/GIScience/badges/raw/master/status/active.svg)](https://github.com/GIScience/badges#active)
 
 This package is implemented as a [FastAPI dependency](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/?h=depende) which initializes translations using the [`gettext`](https://docs.python.org/3/library/gettext.html) module and makes them available throughout the request lifecycle using a [Conext Variable](https://docs.python.org/3/library/contextvars.html).

@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     // run pytest
-                    sh 'pytest --cov=fastapi-i18n --cov-report=xml tests'
+                    sh 'pytest --cov=fastapi_i18n --cov-report=xml tests'
                     // run static analysis with sonar-scanner
                     def scannerHome = tool 'SonarScanner 4'
                     withSonarQubeEnv('sonarcloud GIScience/ohsome') {

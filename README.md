@@ -1,4 +1,4 @@
-# FastAPI Internationalization (I18N)
+# FastAPI Internationalization (i18n)
 
 This package is implemented as a [FastAPI dependency](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/?h=depende) which initializes translations using the [`gettext`](https://docs.python.org/3/library/gettext.html) module and makes them available throughout the request lifecycle using a [Conext Variable](https://docs.python.org/3/library/contextvars.html).
 
@@ -40,7 +40,7 @@ For an complete example see [tests](/tests).
 
 ### Babel
 
-Babel is not a dependency of FastAPI I18N, but it is useful for [working with GNU gettext message catalogs](https://babel.pocoo.org/en/latest/messages.html).
+Babel is not a dependency of FastAPI i18n, but it is useful for [working with GNU gettext message catalogs](https://babel.pocoo.org/en/latest/messages.html).
 
 To add new locale and use babel to extract messages from Python files run:
 ```bash

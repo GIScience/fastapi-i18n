@@ -1,7 +1,7 @@
 # FastAPI Internationalization (i18n)
 
 [![Build Status](https://jenkins.heigit.org/buildStatus/icon?job=fastapi-i18n/main)](https://jenkins.heigit.org/job/fastapi-i18n/job/main/)
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=fastapi-i18n-to-sql&metric=alert_status)](https://sonarcloud.io/dashboard?id=fastapi-i18n)
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=fastapi-i18n&metric=alert_status)](https://sonarcloud.io/dashboard?id=fastapi-i18n)
 [![LICENSE](https://img.shields.io/github/license/GIScience/fastapi-i18n)](COPYING)
 [![status: active](https://github.com/GIScience/badges/raw/master/status/active.svg)](https://github.com/GIScience/badges#active)
 

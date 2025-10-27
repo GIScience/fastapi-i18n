@@ -1,11 +1,8 @@
 # TODO: Read config from pyproject.toml and fail if config is not found
-import logging
-
-
 import gettext
-
-from contextvars import ContextVar
+import logging
 import os
+from contextvars import ContextVar
 
 from fastapi import Request
 

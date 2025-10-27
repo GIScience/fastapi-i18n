@@ -1,7 +1,9 @@
-from tests import main
-from fastapi.testclient import TestClient
 from pathlib import Path
+
 import pytest
+from fastapi.testclient import TestClient
+
+from tests import main
 
 client = TestClient(main.app)
 

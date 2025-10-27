@@ -1,3 +1,3 @@
-from fastapi_i18n.main import i18n, _
+from fastapi_i18n.main import _, i18n
 
-__all__ = ("i18n", "_")
+__all__ = ("_", "i18n")

@@ -1,5 +1,7 @@
 from pathlib import Path
+
 import pytest
+
 from fastapi_i18n import _
 
 

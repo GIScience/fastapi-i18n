@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Depends
+from fastapi import Depends, FastAPI
 
-from fastapi_i18n import i18n, _
+from fastapi_i18n import _, i18n
 
 app = FastAPI(dependencies=[Depends(i18n)])
 

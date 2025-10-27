@@ -3,7 +3,7 @@
 [![Build Status](https://jenkins.heigit.org/buildStatus/icon?job=fastapi-i18n/main)](https://jenkins.heigit.org/job/fastapi-i18n/job/main/)
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=fastapi-i18n&metric=alert_status)](https://sonarcloud.io/dashboard?id=fastapi-i18n)
 [![PyPI - Version](https://img.shields.io/pypi/v/fastapi-i18n)](https://pypi.org/project/fastapi-i18n/)
-[![LICENSE](https://img.shields.io/github/license/GIScience/fastapi-i18n)](COPYING)
+[![LICENSE](https://img.shields.io/github/license/GIScience/fastapi-i18n)](https://github.com/GIScience/fastapi-i18n/blob/main/COPYING)
 [![status: active](https://github.com/GIScience/badges/raw/master/status/active.svg)](https://github.com/GIScience/badges#active)
 
 This package is implemented as a [FastAPI dependency](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/?h=depende) which initializes translations using the [`gettext`](https://docs.python.org/3/library/gettext.html) module and makes them available throughout the request lifecycle using a [Conext Variable](https://docs.python.org/3/library/contextvars.html).
@@ -11,7 +11,7 @@ This package is implemented as a [FastAPI dependency](https://fastapi.tiangolo.c
 ## Installation
 
 ```bash
-uv add git+https://gitlab.heigit.org/mschaub/fastapi-i18n.git
+uv add fastapi-i18n
 ```
 
 ## Prerequisites
@@ -42,7 +42,7 @@ def root():
 
 Set `Accept-Language` header for requests to get a translated version of the response.
 
-For an complete example see [tests](/tests).
+For a complete example see [tests](https://github.com/GIScience/fastapi-i18n/blob/main/tests).
 
 ### Babel
 
@@ -70,7 +70,7 @@ pybabel update -i messages.pot -d locale
 
 ## Roadmap
 
-- [ ] Move to GitHub
+- [x] Move to GitHub
 - [ ] Support configuration via `pyproject.toml`
 - [ ] Validate locale string
 - [ ] Support setting locale using query parameter

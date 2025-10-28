@@ -13,3 +13,8 @@ repos:
     rev: 0.9.5
     hooks:
       - id: uv-lock
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: check-added-large-files
+        args: ["--maxkb=1024"]

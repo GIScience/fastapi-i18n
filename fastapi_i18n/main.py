@@ -45,3 +45,11 @@ def _(message: str) -> str:
             "FastAPI I18N translator is not set. Returning message untranslated."
         )
         return message
+
+
+def get_locale() -> str:
+    """Get the current setting for locale."""
+    try:
+        return locale.get()
+    except LookupError:
+        return os.getenv("FASTAPI_I18N_LOCALE_DEFAULT", "en")

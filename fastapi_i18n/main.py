@@ -41,7 +41,7 @@ def _(message: str) -> str:
     try:
         return translator.get().translate(message)
     except LookupError:
-        logging.warning(
+        logging.debug(
             "FastAPI I18N translator is not set. Returning message untranslated."
         )
         return message

@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 from unittest.mock import Mock
 
@@ -21,6 +22,7 @@ def test_upper_to_lower(monkeypatch):
 
 def test_translate(caplog):
     """Call translate without usage of the FastAPI dependency."""
+    caplog.set_level(logging.DEBUG)
     assert _("Hello from fastapi-i18n!") == "Hello from fastapi-i18n!"
     assert "FastAPI I18N translator is not set." in caplog.text
 

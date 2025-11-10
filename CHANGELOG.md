@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.6.0
+
+- refactor: use module level logger instead of root logger (fa46889)
+
 ## 0.5.0
 
 - refactor: change logging level to debug (92e1507)

@@ -6,6 +6,8 @@ from contextvars import ContextVar
 
 from fastapi import Request
 
+logger = logging.getLogger("fastapi_i18n")
+
 
 class Translator:
     def __init__(self, locale: str):
@@ -41,7 +43,7 @@ def _(message: str) -> str:
     try:
         return translator.get().translate(message)
     except LookupError:
-        logging.debug(
+        logger.debug(
             "FastAPI I18N translator is not set. Returning message untranslated."
         )
         return message

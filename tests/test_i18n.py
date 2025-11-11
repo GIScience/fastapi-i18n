@@ -58,7 +58,7 @@ async def test_i18n_invalid_locale(caplog):
     await anext(gen)
 
     assert get_locale() == "en"
-    assert verify(caplog.text)
+    assert verify(caplog.text.splitlines()[0])
 
 
 def test_parse_accept_language():

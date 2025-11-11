@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.7.0
+## 0.7.1
 
 - fix: extract locale from Accept-Language header properly (9e1d995)
 - build: add pytest-approval as dependency (78830b0)

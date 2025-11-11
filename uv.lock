@@ -324,14 +324,14 @@ wheels = [
 
 [[package]]
 name = "pytest-approval"
-version = "0.2.0"
+version = "0.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pytest" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/39/16/cf0fe6c1b46077ac600ffe806040ece3865685c8d80bc4188651e24b8c78/pytest_approval-0.2.0.tar.gz", hash = "sha256:b924e216df8243ab058392c782201b6b76a3dbdca90552cb83fd0eccdafc627e", size = 59644, upload-time = "2025-11-06T15:34:06.859Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6c/f1/07e2400d12f48a6ea7fcbde7836fee02a9c8e4f13341b754ce642ebf1b8a/pytest_approval-0.3.0.tar.gz", hash = "sha256:0f81ebcaf4567c1ce03aa2fce2e6020e2ae9c95ffcc3f58c70abc9c94273ac7b", size = 59625, upload-time = "2025-11-11T14:15:32.797Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fa/1c/6ec7bcf1eca8e0fd1d5b9e7a5ca662e3eaee32ebcf5d7b3217a7b5cacd58/pytest_approval-0.2.0-py3-none-any.whl", hash = "sha256:2af923d209b50d766b5634f76243ee7f48a7c1c80a3286e9fe3158ba0d885be9", size = 71229, upload-time = "2025-11-06T15:34:05.745Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/0e/b9f10c7938c94988bb32fd793861ccdcf3569cc6beb12214c160e993e8e1/pytest_approval-0.3.0-py3-none-any.whl", hash = "sha256:d47280ec69bb98f40e0c67a7d2ac50cde9f545241fd53f89274ffbbb035d06ea", size = 71171, upload-time = "2025-11-11T14:15:31.253Z" },
 ]
 
 [[package]]

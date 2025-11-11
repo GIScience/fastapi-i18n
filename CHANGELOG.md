@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.7.0
+
+- fix: extract locale from Accept-Language header properly (9e1d995)
+- build: add pytest-approval as dependency (78830b0)
+- build!: deprecate support of python 3.10 (510870b)
+
 ## 0.6.0
 
 - refactor: use module level logger instead of root logger (fa46889)

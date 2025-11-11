@@ -30,3 +30,16 @@ def test_de_locale():
     response = client.get("/", headers={"Accept-Language": "de"})
     assert response.status_code == 200
     assert response.json() == "Hallo von fastapi-i18n!"
+
+
+def test_multiple_locale():
+    # example is inspired by headers send from swagger
+    response = client.get("/", headers={"Accept-Language": "de-de, en-us;q=0"})
+    assert response.status_code == 200
+    assert response.json() == "Hallo von fastapi-i18n!"
+
+
+def test_invalid_locale_fallback():
+    response = client.get("/", headers={"Accept-Language": "foo"})
+    assert response.status_code == 200
+    assert response.json() == "Hello from fastapi-i18n!"

@@ -1,0 +1,8 @@
+ERROR    fastapi_i18n:main.py:85 Accept-Language header is set but contains unknown locale. Fallback to default locale.
+Traceback (most recent call last):
+  File "/home/matthias/work/projects/fastapi-i18n/fastapi_i18n/main.py", line 83, in extract_locale
+    Locale.parse(locale)  # validate
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/home/matthias/work/projects/fastapi-i18n/.venv/lib/python3.13/site-packages/babel/core.py", line 427, in parse
+    raise UnknownLocaleError(input_id)
+babel.core.UnknownLocaleError: unknown locale 'foo'

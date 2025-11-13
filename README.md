@@ -16,13 +16,18 @@ uv add fastapi-i18n
 
 ## Prerequisites
 
-A locale directory adhering to the GNU gettext message catalog API containing translated messages. See [chapter on Babel](#Babel) for more details.
+A locale directory adhering to the GNU gettext message catalog API containing
+translated messages. See [chapter on Babel](#Babel) for more details.
 
 ## Configuration
 
 ```bash
-export FASTAPI_I18N_LOCALE_DIR="paht/to/locale/dir"
-export FASTAPI_I18N_LOCALE_DEFAULT="de"
+export FASTAPI_I18N__LOCALE_DIR="paht/to/locale/dir"  # required
+
+export FASTAPI_I18N__LOCALE_DEFAULT="de"  # defaults to "en"
+
+# To ignore the Accept-Language header for certain referes set:
+export FASTAPI_I18N__IGNORE_REFERES="https://api.quality.ohsome.org/v1/docs"
 ```
 
 ## Usage
@@ -46,7 +51,7 @@ For a complete example see [tests](https://github.com/GIScience/fastapi-i18n/blo
 
 ### Babel
 
-Babel is not a dependency of FastAPI i18n, but it is useful for [working with GNU gettext message catalogs](https://babel.pocoo.org/en/latest/messages.html).
+Babel is useful for [working with GNU gettext message catalogs](https://babel.pocoo.org/en/latest/messages.html).
 
 To add new locale and use babel to extract messages from Python files run:
 ```bash
@@ -70,7 +75,6 @@ pybabel update -i messages.pot -d locale
 
 ## Roadmap
 
-- [x] Move to GitHub
 - [ ] Support configuration via `pyproject.toml`
 - [ ] Validate locale string
 - [ ] Support setting locale using query parameter

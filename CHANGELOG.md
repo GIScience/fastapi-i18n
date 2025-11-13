@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.9.0
+
+- refactor!: separate parts of environment variables with __ (862184c)
+
 ## 0.8.0
 
 - feat: ignore accept-language header for configured referes (7bb2ad4)

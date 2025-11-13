@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.8.0
+
+- feat: ignore accept-language header for configured referes (7bb2ad4)
+
 ## 0.7.1
 
 - fix: extract locale from Accept-Language header properly (9e1d995)

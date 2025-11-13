@@ -11,11 +11,11 @@ client = TestClient(main.app)
 @pytest.fixture(autouse=True)
 def test_upper_to_lower(monkeypatch):
     monkeypatch.setenv(
-        "FASTAPI_I18N_LOCALE_DIR",
+        "FASTAPI_I18N__LOCALE_DIR",
         str(Path(__file__).parent / "locale"),
     )
     monkeypatch.setenv(
-        "FASTAPI_I18N_LOCALE_DEFAULT",
+        "FASTAPI_I18N__LOCALE_DEFAULT",
         "en",
     )
 

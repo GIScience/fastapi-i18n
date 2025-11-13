@@ -9,12 +9,12 @@ from fastapi import Request
 
 logger = logging.getLogger("fastapi_i18n")
 
-LOCALE_DEFAULT = os.getenv("FASTAPI_I18N_LOCALE_DEFAULT", "en")
+LOCALE_DEFAULT = os.getenv("FASTAPI_I18N__LOCALE_DEFAULT", "en")
 
 
 class Translator:
     def __init__(self, locale: str):
-        locale_dir = os.getenv("FASTAPI_I18N_LOCALE_DIR")
+        locale_dir = os.getenv("FASTAPI_I18N__LOCALE_DIR")
         self.translations = gettext.translation(
             domain="messages",
             localedir=locale_dir,
@@ -34,7 +34,7 @@ async def i18n(request: Request):
     accept_language = request.headers.get("Accept-Language", LOCALE_DEFAULT)
 
     referer = request.headers.get("Referer", None)
-    ignore_referes = os.environ.get("FASTAPI_I18N__IGNORE_REFERERS", "").split(",")
+    ignore_referes = os.getenv("FASTAPI_I18N__IGNORE_REFERERS", "").split(",")
     if referer in ignore_referes:
         accept_language = LOCALE_DEFAULT
 
@@ -63,7 +63,7 @@ def get_locale() -> str:
     try:
         return locale.get()
     except LookupError:
-        return os.getenv("FASTAPI_I18N_LOCALE_DEFAULT", "en")
+        return os.getenv("FASTAPI_I18N__LOCALE_DEFAULT", "en")
 
 
 def parse_accept_language(accept_language: str) -> list[str]:

@@ -68,6 +68,14 @@ pybabel extract -F babel.cfg -o messages.pot .
 pybabel update -i messages.pot -d locale
 ```
 
+## Development Setup
+
+```bash
+uv run pre-commit install
+uv run pytest
+uv run pybabel compile -d tests/locale
+FASTAPI_I18N__LOCALE_DIR=tests/locale uv run --with fastapi[standard] fastapi dev tests/main.py
+```
 
 ## Roadmap
 

@@ -3,9 +3,10 @@ import gettext
 import logging
 import os
 from contextvars import ContextVar
+from typing import Annotated
 
 from babel import Locale, UnknownLocaleError
-from fastapi import Request
+from fastapi import Header
 
 logger = logging.getLogger("fastapi_i18n")
 
@@ -30,8 +31,12 @@ locale: ContextVar[str] = ContextVar("locale")
 translator: ContextVar[Translator] = ContextVar("translator")
 
 
-async def i18n(request: Request):
-    accept_language = request.headers.get("Accept-Language", LOCALE_DEFAULT)
+async def i18n(
+    accept_language: Annotated[
+        str,
+        Header(title="Accept-Language"),
+    ] = LOCALE_DEFAULT,
+):
     locale_value = extract_locale(accept_language)
     token_locale = locale.set(locale_value)
     token_translator = translator.set(Translator(locale=locale_value))

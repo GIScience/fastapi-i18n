@@ -1,6 +1,5 @@
 import logging
 from pathlib import Path
-from unittest.mock import Mock
 
 import pytest
 from pytest_approval import verify
@@ -42,19 +41,14 @@ def test_get_locale_custom(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_get_locale_context():
-    mock = Mock()
-    mock.headers.get.return_value = "es"
-    gen = i18n(mock)
+    gen = i18n("es")
     await anext(gen)
-
     assert get_locale() == "es"
 
 
 @pytest.mark.asyncio
 async def test_i18n_invalid_locale(caplog):
-    mock = Mock()
-    mock.headers.get.return_value = "foo"
-    gen = i18n(mock)
+    gen = i18n("foo")
     await anext(gen)
 
     assert get_locale() == "en"

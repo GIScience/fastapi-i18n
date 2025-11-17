@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.10.0
+
+- revert!: remove configuration to ignore accept-language header for certain referes
+
 ## 0.9.0
 
 - refactor!: separate parts of environment variables with __ (862184c)

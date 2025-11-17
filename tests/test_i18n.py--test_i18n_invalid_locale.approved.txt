@@ -1,1 +1,1 @@
-ERROR    fastapi_i18n:main.py:91 Accept-Language header is set but contains unknown locale. Fallback to default locale.
+ERROR    fastapi_i18n:main.py:85 Accept-Language header is set but contains unknown locale. Fallback to default locale.

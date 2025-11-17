@@ -23,11 +23,7 @@ translated messages. See [chapter on Babel](#Babel) for more details.
 
 ```bash
 export FASTAPI_I18N__LOCALE_DIR="paht/to/locale/dir"  # required
-
 export FASTAPI_I18N__LOCALE_DEFAULT="de"  # defaults to "en"
-
-# To ignore the Accept-Language header for certain referes set:
-export FASTAPI_I18N__IGNORE_REFERES="https://api.quality.ohsome.org/v1/docs"
 ```
 
 ## Usage

@@ -32,12 +32,6 @@ translator: ContextVar[Translator] = ContextVar("translator")
 
 async def i18n(request: Request):
     accept_language = request.headers.get("Accept-Language", LOCALE_DEFAULT)
-
-    referer = request.headers.get("Referer", None)
-    ignore_referes = os.getenv("FASTAPI_I18N__IGNORE_REFERERS", "").split(",")
-    if referer in ignore_referes:
-        accept_language = LOCALE_DEFAULT
-
     locale_value = extract_locale(accept_language)
     token_locale = locale.set(locale_value)
     token_translator = translator.set(Translator(locale=locale_value))

@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## 0.11.0
+
+- feat: make accept language header visible in swagger interface: use Header annotation instead of the Request object in the Dependency (5c13eb1)
+
 ## 0.10.0
 
-- revert!: remove configuration to ignore accept-language header for certain referes
+- revert!: remove configuration to ignore accept-language header for certain referes (b2e8e98 )
 
 ## 0.9.0
 

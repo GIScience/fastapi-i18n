@@ -28,12 +28,10 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://ohsome.org/"
-# TODO: update once dedicated documentation is available
 Documentation = "https://github.com/GIScience/fastapi-i18n/blob/main/README.md"
 Repository = "https://github.com/GIScience/fastapi-i18n"
 Issues = "https://github.com/GIScience/fastapi-i18n/issues"
-# TODO: create changelog
-# Changelog = "https://github.com/GIScience/fastapi-i18n/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/GIScience/fastapi-i18n/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["uv_build>=0.9.5,<0.10.0"]

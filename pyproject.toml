@@ -53,6 +53,7 @@ module-root = ""  # use fastapi-i18n/ as root instead the default src/fastapi-i1
 
 [tool.ruff.lint]
 select = [
+    "A",    # flake8-builtins
     "E",    # pycodestyle Error
     "F",    # Pyflakes
     "I",    # isort
@@ -67,6 +68,7 @@ select = [
     "S",    # bandit
     "B",    # bugbear
     "SIM",  # simplify
+    "FAST", # FastAPI
 ]
 
 [tool.ruff.lint.extend-per-file-ignores]

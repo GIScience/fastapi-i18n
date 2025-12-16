@@ -69,6 +69,7 @@ select = [
     "B",    # bugbear
     "SIM",  # simplify
     "FAST", # FastAPI
+    "INT",  # flake8-gettext
 ]
 
 [tool.ruff.lint.extend-per-file-ignores]
